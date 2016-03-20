@@ -1,0 +1,40 @@
+﻿<%@ Page Title="SISFREQ - Frequencia" Language="C#" MasterPageFile="~/Layouts/MPFuncionario.master" AutoEventWireup="true" CodeBehind="pgFrequencia.aspx.cs" Inherits="Apresentacao.Pages.pgFrequencia" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
+    <asp:Panel ID="panelListaFrequencia" runat="server" GroupingText="Lista de Frequencia">
+        <div class="form-group">
+            <label class="control-label col-sm-1 col-md-1 col-lg-1 col-xs-1 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-offset-3 col-lg-offset-3">Frequencia</label>
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+                <asp:TextBox ID="txtDataInicial" CssClass="form-control" runat="server"></asp:TextBox>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+                <asp:TextBox ID="txtDataFinal" CssClass="form-control" runat="server"></asp:TextBox>
+            </div>
+            <asp:Button ID="btnMostrar" CssClass="btn btn-primary" OnClick="btnMostrar_Click" runat="server" Text="Mostrar" />
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <asp:GridView ID="gvFrequencia" HeaderStyle-BackColor="Gray" CssClass="tablex table-condensed table-bordered col-lg-12" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" OnRowDataBound="gvFrequencia_RowDataBound">
+                        <Columns>
+                            <asp:BoundField DataField="Dia.DayOfWeek" HeaderStyle-CssClass="text-center col-lg-2" ItemStyle-CssClass="text-center"  />
+                            <asp:BoundField DataField="Dia" HeaderStyle-CssClass="text-center col-lg-2" ItemStyle-CssClass="text-center" HeaderText="Dia" DataFormatString="{0:d}" />
+                            <asp:BoundField DataField="Entrada" HeaderStyle-CssClass="text-center col-lg-2" ItemStyle-CssClass="text-center" HeaderText="Entrada" DataFormatString="{0:t}" />
+                            <asp:BoundField DataField="SaidaAlmoco" HeaderStyle-CssClass="text-center col-lg-2" ItemStyle-CssClass="text-center" HeaderText="Saida Almoço" DataFormatString="{0:t}" />
+                            <asp:BoundField DataField="VoltaAlmoco" HeaderStyle-CssClass="text-center col-lg-2" ItemStyle-CssClass="text-center" HeaderText="Volta Almoço" DataFormatString="{0:t}" />                            
+                            <asp:BoundField DataField="Saida" HeaderStyle-CssClass="text-center col-lg-2" ItemStyle-CssClass="text-center" HeaderText="Saida Almoço" DataFormatString="{0:t}" />
+                        </Columns>
+                    </asp:GridView>
+                </div>
+            </div>
+
+        </div>
+    </asp:Panel>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $("#ContentPlaceHolder3_ContentPlaceHolder4_txtDataInicial").inputmask("99/99/9999")
+            $("#ContentPlaceHolder3_ContentPlaceHolder4_txtDataFinal").inputmask("99/99/9999")
+        })
+    </script>
+</asp:Content>

@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Layouts/MPExterna.Master" AutoEventWireup="true" CodeBehind="MPInterna.master.cs" Inherits="Apresentacao.Layouts.MPInterna" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div>
+
+
+
+        <ul class="nav navbar-nav">
+
+            <li runat="server" id="liAdministrador" visible="false">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pages/pgSetor.aspx">Setor</a></li>
+                    <li><a href="../Pages/pgCargo.aspx">Cargo</a></li>
+                    <li><a href="../Pages/pgFeriado.aspx">Feriados</a></li>
+                    <li><a href="../Pages/pgFuncionario.aspx">Funcionário</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="../Pages/pgFrequenciaFuncionario.aspx">Consultar Frequências</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" runat="server" id="liGerente" visible="false">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gerente <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pages/pgFuncionario.aspx">Funcionário</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="../Pages/pgJustificativasDoSetor.aspx">Justificativas</a></li>
+                    <li><a href="../Pages/pgFrequenciaFuncionario.aspx">Consultar Frequência</a></li>
+                </ul>
+            </li>
+
+            <li runat="server" id="liAdmGerente" visible="false">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pages/pgSetor.aspx">Setor</a></li>
+                    <li><a href="../Pages/pgCargo.aspx">Cargo</a></li>
+                    <li><a href="../Pages/pgFeriado.aspx">Feriados</a></li>
+                    <li><a href="../Pages/pgFuncionario.aspx">Funcionário</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown" runat="server" id="liGerenteAdm" visible="false">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gerente <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pages/pgJustificativasDoSetor.aspx">Justificativas</a></li>
+                    <li><a href="../Pages/pgFrequenciaFuncionario.aspx">Consultar Frequência</a></li>
+                </ul>
+            </li>
+            <li runat="server" id="liPessoal" visible="false">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pessoal<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pages/pgFrequencia.aspx">Visualizar Frequência</a></li>
+                    <li><a href="../Pages/pgJustificativa.aspx">Justificativa</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"><asp:Label ID="lblUsuario" runat="server"></asp:Label><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pages/pgAlterarSenha.aspx">Alterar Senha</a></li>
+                    <li><a href="../Pages/Manuais/Usuario/SISFREQ.html" target="_blank">Manual do Usuário</a></li>
+                    <li runat="server" id="liManualDesenvolvedor" visible="false"><a href="../Pages/Manuais/Desenvolvedor/index.html" target="_blank">Manual do Desenvolvedor</a></li>
+                </ul>
+
+            </li>
+            <li>
+                <a href="../Pages/pgLogoff.aspx"><span class="glyphicon glyphicon-off logoff"></span></a>
+            </li>
+        </ul>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

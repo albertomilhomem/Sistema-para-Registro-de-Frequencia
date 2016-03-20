@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPExterna.master.cs" Inherits="Apresentacao.Layouts.MPExterna" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../Content/Style.css" rel="stylesheet" />
+
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+    <script src="../Scripts/npm.js"></script>
+    <script src="../Scripts/jquery-1.9.1.intellisense.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/jquery.inputmask/jquery.inputmask.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="nav navbar-default navbar-static-top">
+                <div class="col-md-10 col-sm-10 col-xs-10 col-lg-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-offset-1">
+                    <div class="navbar-header">
+                        <asp:HyperLink NavigateUrl="~/pgFrequencia.aspx" ID="hlRegistroFrequencia" CssClass="text-warning navbar-brand" runat="server">Registro de Frequência</asp:HyperLink>                        
+                        <%--<a href="../pgFrequencia.aspx" class="text-warning navbar-brand">Sistema de Frequência</a>--%>
+                    </div>
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <form id="form" class="form-horizontal paddingP" role="form" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+</body>
+</html>

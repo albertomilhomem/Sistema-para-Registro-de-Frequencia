@@ -1,0 +1,13 @@
+Usuários do Sistema
+
+Administrador
+Matricula:70000
+Senha: 123
+
+Gerente
+Matricula: 70001
+Senha: 123
+
+Funcionário
+Matricula: 70002
+Senha: 123

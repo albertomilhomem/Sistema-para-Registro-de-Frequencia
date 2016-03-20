@@ -1,0 +1,1299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CDF3CE7-2F3B-43F1-B91A-C9F14AD858DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apresentacao</RootNamespace>
+    <AssemblyName>Apresentacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Apresentacao.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagens\legenda.png" />
+    <Content Include="Layouts\MPInterna.master" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_100.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_101.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_102.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_103.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_104.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_105.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_106.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_108.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_109.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_110.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_111.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_112.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_113.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_114.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_115.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_116.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_117.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_118.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_119.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_97.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_98.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_99.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\fti\FTI_Files.json" />
+    <Content Include="Pages\Manuais\Desenvolvedor\LastBuild.log" />
+    <Content Include="Pages\Manuais\Desenvolvedor\SearchHelp.inc.php" />
+    <Content Include="Pages\Manuais\Desenvolvedor\SearchHelp.php" />
+    <Content Include="Pages\Manuais\Desenvolvedor\Web.Config" />
+    <None Include="Properties\PublishProfiles\SISFREQ.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Style.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Icon.png" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Layouts\MPExterna.Master" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\00a502ef-0574-e4d1-7539-a608f5d2ae66.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\00ab27c5-7d96-528e-7ab6-db201e7786e5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\00b230c0-7879-cb12-e8f3-b50271db430c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\00be3b47-0d2e-1289-6da6-49bb37383d2d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\01afd1b5-0a9f-9c14-7a92-924a9537026c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\02488f56-c8a5-8e3f-485c-6e95257ac4ed.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\027df0c9-f833-1be1-9059-fb739639228f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\02d98624-3844-444e-0d78-168599321d8a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\02eb8aa7-0e84-9863-8f57-a45b525c1319.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\038087b5-3e71-8940-a74d-48dc68f791e2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\03c73dc9-d973-1199-6a5b-88e3acc1b382.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\03ecf63e-2094-8a13-cfd4-2cad0c1f29fc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\04124c93-49b1-d4ea-6af3-4156b59fd1fa.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\054a6274-e646-f214-0511-6d49bc04257a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\05efff9c-5d50-5862-c41a-5895fb24aaba.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\068dbae5-d81a-4b45-4df8-32240c1ed60a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0787ba89-cb22-d793-d12d-70ffe62c5388.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\08e6fc87-7863-ae53-61ae-359d51ee7993.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\08e8d670-3bb8-59e2-21d4-2afc5498e537.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0912392a-36d0-f470-c504-964f2eb98a64.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\09660123-5c51-b9c8-56c0-90f124027fd0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\098ac060-532d-3ff3-c9e5-716f27cf1f2c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\09b06ca6-02f1-6a1e-80ff-b9778de2743a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\09cd9318-a9b6-32a0-eaf8-2248a49a2ef7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\09e2906a-0b8b-36fe-56c5-386664a72507.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0a9887a2-91aa-3523-ca28-0836273cd622.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0ad3e285-f296-3fa4-61e8-542bbff93c50.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0d40ea95-18a9-dff2-b73d-da4f3cf3a49a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0d4356e8-b4a3-8924-a295-beafbb2ff01c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0d65b55d-9f51-d048-e691-990b8b0476a4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0e5430bd-f57c-01c8-021e-81c282df7f5e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0ef3248e-f426-9bdd-7565-65d8ba821406.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0f5ced1c-0a9e-28a7-3b04-2fe6992c53ac.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0f6e28d9-6d3f-d37a-df47-f3af9adc273a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\0f83a7eb-6f61-91bf-ddc9-32bd82b131d5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\10bade28-5f1c-fcb8-40e1-42485614e093.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1116ed27-98ee-5074-869b-80fac96e3283.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\12851389-fac2-a275-e857-36a1c2f3e0ed.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\146fa2c2-c642-bccf-613d-491eaf11c67e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1482001e-f9c2-38d6-e1c3-03569df56c94.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\14e0e9f0-b1e3-8a6a-fafd-4f8601fb2877.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\150b33fe-dba9-0776-2e03-cc34a319ecf9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\152225f4-0e12-f73b-2433-53a29fa272c9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\15a343bc-19fe-8106-f7ae-66b957c8775e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\170c221e-8738-07a9-f147-2fec8b99901d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\180d093f-2d1b-113f-78fd-cab55855843a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\18105bab-83fe-7b7c-711a-7e9e3438467e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1876ee8c-99d9-7a4b-07f7-7593eca80cf5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1955cafd-ad4a-2e9b-ab4c-6b4f036250b8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\19db47c9-1d86-6366-4bbb-8b1d88c747bd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1a0e04b7-57e6-4abf-cb09-422cb0835790.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1a20b3a1-acd4-24e0-9765-7139f815f444.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1a67abed-b5c7-a042-9305-63327acd6a9a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1a9a2375-155e-cddf-36f0-af11bdbe1143.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1b03d8fc-bef8-1c1a-68b7-82b454745f91.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1b1fa5db-01a9-132a-ccf1-8dd881b322a3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1b676294-733e-cb14-6d48-f189e1158c23.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1c081529-f55d-326f-e94a-fd060b164fe0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1c4fb649-1fb7-f850-583c-8f6786154698.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1ca0626d-b24a-fb9a-c9d8-a2dad4c5ca76.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1d0466d4-2ae5-ebb5-23f1-80c23a392fa2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1d4b76ca-96ef-ff7c-8063-87387d3cc5f9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1de53455-220a-5e9e-b0fe-d7fd6604fb3e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1e580f5a-978a-a6bd-ff67-79eefc4c5310.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1e6aac21-453f-2a49-edd3-058856d04773.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1ea6a18e-ae5b-dceb-7ad0-b1b6d43fc89d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1eae03af-b6a0-5d18-5706-cedb6a5fcb36.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1f4c764b-c66c-9ea4-5e98-f33593e57d17.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1f946a3f-2abe-5e14-920d-1a6db4072a1f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1fbcfb27-6444-20e9-510a-07ee459086cc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\1fcd516a-7ba2-36dc-d4a3-7222f98ec3a5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\210c8288-7c16-9ce4-a5ba-dfbfb25385a6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2118b50f-e68b-9c57-bb7a-65a6651e5863.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\218f1156-b75d-a3c5-75cb-4195ef46fe94.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\21cd56a6-051c-3a1d-18e3-f66da88b74d2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\22ef0c6e-b49b-9343-4496-888354d51cd0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\233c1f5f-a180-bea0-7d6a-7e85043354fe.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2438dc87-1465-9f75-0e89-36e605fd9132.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\247ca081-40c2-6d8c-2ed6-45ec81e868cc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\251c2986-4382-49a5-63ab-1720d6c33d0b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\252228e2-01f4-ba30-cc3d-c30d5f9aaa21.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\26ad5009-96c0-1272-e842-2fa77f345c9a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\27028e19-e975-6fb0-3b4b-8f3c29317e66.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\271ac0b7-387b-b5c7-465b-e44da55271eb.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\27550959-28a4-a6ce-d4ba-76897c533c93.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\27655864-31f9-0f7f-f8b3-820ac27a70f4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\27b2c957-f7b8-bff7-2caa-c9136c521f37.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\27b88561-bc12-a76c-39ef-9cab9942d43d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\27fc86ed-8476-15a7-4c15-dd532d125ed7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\284ab340-fbec-17bb-1622-9a7a5776e77a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\28b614d9-742c-096a-c214-42cb0d98616f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\28bd2a84-024e-56e5-efca-ff54eca6aa3e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2917c72d-b6af-4a23-22dc-cd51bfbb3204.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\293d1a66-7c4c-1f78-b68f-f8e35dac202c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\29b5a716-2694-6526-7396-6e462e0e2f2c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2af23137-4b8e-a86c-02a4-65bfc865f74c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2afe4580-f83c-36ae-985a-b357038e5a6d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2b35eecc-7245-29e4-0fb2-f7dc5c690bdd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2b8c3ae4-b16d-7aa4-bf94-85fbcb3a3e0d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2c9db93a-33c1-9d43-5792-181c16721105.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2cb05764-823a-3a4a-d48d-bbc8154fa8e7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2cf9a0d9-5cfd-9caf-a597-fa0efe7161af.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2d34c32b-4278-eca8-9419-313f38dd01a2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2d436b80-72bf-7e39-ed97-0601362aa1d1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2d6c4321-8892-aa7a-bad1-5bb9458ce8fc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2db532b8-865d-61ea-736b-cb411026520e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2dbc32b4-5f6b-25dc-2f03-6e305a2bce61.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2ddc5263-b01a-7c67-dffc-c85e7581655d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2de51f5a-f107-3189-e65d-41d949023aee.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2deac85f-fbe6-95b2-d1d9-3d21837fe805.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2f375a22-6fc1-88a0-7a50-faf6fc54c18c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2f830dae-821e-964c-464d-39afcbd62df3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\2fce8410-c169-eae8-c5e3-d14ac76ea090.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\30924932-f867-fc95-b9a9-5feffa1f7d41.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\30af35a8-b635-1b7d-1aea-cfe625a59715.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\30c5d9d1-f6b6-506e-17f7-65c3dfb89bdc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\334db5f5-648c-115f-e081-b77f84253f55.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\33a6f966-ec7c-3193-a4db-71402b97be85.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\33bb7bfd-89bf-c784-b5f6-803d0ec8e5ac.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\340c43ea-9fa2-09a7-4612-e9a623f71104.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\34be9f70-f2ce-c02f-8661-5e6e6fca7c92.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\357091ce-82f1-e2aa-6604-fa6eb4a59dd8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3570931e-cedb-1854-23cb-7e9e58b94cbe.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3593ae31-a17f-43b9-92b8-dd667ea36140.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\364b9e70-42bd-6979-881d-406c20d58fda.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\36b189f2-ab8d-5099-bdee-c5629e033b80.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\36c50b86-c59c-ef53-8629-aa15df5ede66.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3720f134-d7f5-541b-d6d6-5237e4cab030.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\376c2c4b-358e-61a6-f1d0-6a7b3fcec913.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\38be0a6f-34cd-e872-0b96-0002afba0550.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\396583da-0a63-1d36-924f-adb1d339c1e1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3a74c197-10f1-340f-5457-37aca9a88887.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3ae221ac-c194-c619-abf8-3f870b61db05.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3afad6da-f67c-c7c5-7f36-7e6c791957e4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3bdee8f1-1fae-e329-2f95-58d0e1b9b801.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3c27984b-336c-4979-3c07-602337fae17b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3c3ae2f5-beda-1b26-d3d5-9ad8615654ab.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3c917a98-0736-cee1-13e9-99dacce84cd6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3d117ed6-9f12-b5ac-2f90-359ca5bae92e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3e895f9f-7267-4cef-5c5a-0f2a660bdd82.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3ec1fe59-89b3-2fbd-1615-147f37a18934.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3f43f331-15bd-0488-5cf3-3f968dfe1ea4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\3f95f05b-b0c9-f541-3e58-350d78c35865.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\401c9ab8-b632-c9b1-95de-55c1258dc8e1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\401f7c56-97c5-5994-8c76-df1a9b56e95d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\402045d9-09cb-c8c7-a36b-b72459457aed.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4021cb8c-bcb4-87e6-f8df-f21ed75427d2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4044959d-c9b0-45ac-7ae6-f67d36074a42.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\40c88889-a7ee-8802-aeae-9c539a07cc2e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\415933e4-f40d-8bee-13ad-35f96b982e70.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4166e1fd-4ae1-4038-059c-7dbb6a9dff27.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\41b08c56-9848-7911-3979-86401d8998fd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\422532e1-cf7c-f7a7-f73d-2af405890c0c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\427f35e4-8747-140f-dcbc-928f8f64e0e2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\42a2cb9b-c2f7-8383-c1c3-6bec3a0e286c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\431eb1bb-57f6-9afb-23ca-7cfd564f1c09.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\432d2f3f-156d-bf47-85a5-bb0889bfd7ae.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4345c87a-04bc-ea01-fbf9-f76224f0e38f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\43933e9a-c122-d62c-0c73-01e0598ffd7d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\43d51f73-e1e6-f995-49ec-d90b4fd573f5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4484df0d-9193-02c0-b7bb-985d3675a8a6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\449ad50b-0eb3-d41c-eafd-6adc269cfc8b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\455e0fef-6426-fa7b-bbed-9589b4360acb.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\46fdee2a-c281-c2fe-2414-1e21996b6e30.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\47578cb9-044e-3e82-dd7c-81348236b692.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4759d281-0ec1-f0ed-6fc6-e24441cc65a1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\47ac7bcb-1af3-5fa9-4661-4d64e7d10bfe.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4801306a-d363-fe72-3cba-752c64328f6a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\480a2246-8c3e-d9eb-c1b7-2b3166537fe9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\487ee0dc-7d55-157e-cb50-140c41b363b5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\48d96b31-2caf-6f44-8385-db64cc2e5880.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4900d3f0-fd18-9837-9b38-e6c2273fd04a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4962d4d0-5999-c4b7-346c-b30aabe455b8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4a7f407e-1776-85dc-1fc5-51d906fc4b04.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4b5c05b6-1426-3c3a-4a14-06a6802d5f47.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4bc6bec6-9433-f094-71fa-6f806d936de6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4be04ac5-b2ed-3e3d-1320-061496738c95.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4be3d9eb-8980-3e80-3753-0d292bf76eae.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4c03d5a9-bbed-bf32-491e-b66da4c99240.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4c347df0-3e8b-a997-fc04-c92b94952acc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4c5c2dbb-a4e8-7cfd-f671-5ac00b84980d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4c5c951e-ad7c-90b4-5d43-0ab10ba2ddab.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4d88dd41-8765-0da1-16c5-131a02fdea4e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4dc088c0-2ace-4fa5-f5db-383935bfd956.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4ddaa17f-24ca-9387-8db4-4a47143cefa3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4ec9dc60-e4ea-1d87-7a1c-09657799b931.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4f5673ad-3e4e-d44b-e2f6-4485648564bc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4f6f0d1b-bf08-d586-bfdb-c8cade92f6f9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4f8f5610-bfda-b74f-f897-ad30effb43b7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4fc4f079-fa53-3d03-7a00-f4bb6a633a8b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\4fdfeb95-ac9e-290b-817f-44d449986514.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\501bc663-c556-ed5d-0de3-fae84af57cd3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\50c6393f-a2d1-4678-9f3b-396b2f0e99e1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\511a7a11-af56-837f-7954-97b90913fca4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\51430b82-23c0-5d2e-dbd5-eb97253e35f3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\51e22a11-36f4-fff8-73f3-d5ab8741db1d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\51ea6f37-a314-dd36-c74f-37074ca76b94.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\52219073-110b-555a-0390-72a3d3be7434.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\52462da6-3374-afb7-6e2a-f8072a753f19.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\528dcf84-29a1-4342-a877-d4bb85e7d7b3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\53745c86-d712-b742-94a9-63ae59aefe05.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\539c55ed-7c65-6f06-4975-f3fc17b0ce17.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\53adf237-d0ac-6412-4d4b-74aea5c76da5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\549452f2-27fd-bb8a-ec7d-2816128cd2c5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\54b09bfd-31cd-8bbb-8c95-1faf80490fcb.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5558975d-1214-3fcf-9da6-291b53ea55d2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5592a534-3f3e-f093-47f3-382d9a8ce616.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5761fb19-749c-c094-5378-8a29e8e0e3a8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\576c31b7-c348-5813-1353-d05b528e2e95.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\57733fdf-6f91-555c-5aeb-a059467452e0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\57f12315-2c45-139c-532b-8d15032d3608.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\57f4bb4a-e25d-2af7-8d15-7b4753908e95.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5878d309-d874-bdc4-8ad3-ad7f76349f54.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\58dd29bd-48c4-0f15-499b-9d3229736407.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\59049b29-f4ab-cfc7-5196-ca712cac4265.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\590e322b-ecdb-744d-259e-e68dca165faf.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\592f22cf-db62-17e8-7b26-9434e4b42027.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5a0975cb-257b-6daf-5b72-2ffbee6134ad.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5a208962-3e7f-9843-b41f-3299fca11f03.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5a62a88b-dfda-822d-3a8d-8f75c6ecc0f5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5a8cf778-fb7c-8f8b-719c-963d87537f44.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5aa6dfa1-e74c-028f-fcca-ebd27537ce6c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5aaa08eb-a6ce-c9d2-e53f-6cf9ac0438dc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5adb9af7-0636-ac1e-05c2-df5635211e8c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5b4811bd-574b-5e5e-908f-ea2c8a93daf0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5b59ed60-3fd2-7794-e2d3-6aa71b552db2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5b6a9074-0bfd-4de2-a596-20c2c6ad4d1f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5b91ecdb-7784-0c4b-aa89-a88cfc1bf9ec.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5bddf1a7-b574-9ed5-c585-317ffbf572c2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5cfea36a-b1f7-2b78-2f9c-24c236bc5c70.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5d2a5542-67e4-5577-f78a-79286ed3a8ab.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5da958c8-bd43-f68a-74b0-e1203a839ce9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5db76533-b2a5-ab5a-bbe8-4653ec33b9e2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5dbf3e57-c4f2-a0dd-2cc8-543a139538c3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\5defd5be-1c32-7869-f0ce-f28a792cf115.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\60242ecd-ea32-3ce5-2277-ed0b4a667cd0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\60afc128-7371-e704-053a-dc756dbf459a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\612aae83-4a9c-8fec-4f01-def270f984b7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\616e8211-0c2a-a1c1-56ff-6ebe8d3a8fc8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\61971b6c-b4b7-e452-ead8-ec62934b0932.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\61c2ff12-9c2a-3a3f-3561-efdf13412a3c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\61defc24-81c5-05ad-00c4-c939f40e3265.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\61f938cb-e364-79e9-4d82-ccab9238b65b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\62ccd71a-50bc-d34b-d333-c3a22893ed52.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\645ef7a5-9d28-052f-310c-07e9aed4f253.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\64c95f06-8220-e818-2790-d25e4033361f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\650d66bd-1555-3b43-89fe-b2202007970d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6528ef18-a92a-02fb-6602-571683ec1dc3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\65529f27-6e5e-9bd1-edc4-09edf187fdc8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6587585a-3892-87ad-d3f1-830a6f7451bc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\65c3da12-cb66-81f9-58cb-8834a01d2e28.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6611799d-49eb-42e1-246f-a9daf5ff2b74.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\664176bd-5fa8-4a94-df1c-5d270ceb11fd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6684a057-7aa3-5498-6eac-8dd6e3f1c272.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6719eec5-91d8-b5fe-ce49-4ff46402195b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6797c2ef-595b-c6f2-9e48-b752078adf2a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\688594a9-45ff-a678-7fea-8cc8b3b9dbef.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\68f3798f-dc04-beb8-7972-fddf8cd4f91f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\699102fe-db6b-8459-b482-97883c5cc279.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6a085cd1-c236-3662-49a5-32b2e08d0df7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6b887bd6-c593-caec-8746-b64de2af2b30.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6bbe99b9-a7a4-a428-1377-d11df229f6e6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6bfaf463-3cb4-e56e-89ff-aec115d71025.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6c0fa215-0eb0-337b-08c1-28cd596edbdf.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6c28d18f-00ee-04c4-e2ed-6e04dfd6f2d1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6cf8f934-bfb1-70e9-c07b-a6ffcfd5adc4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6d460aa0-9dbd-a7e0-e264-ec08c7332686.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6d607996-e993-5b0e-9b94-3e2e5b312925.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6ea358fa-f994-e157-7f43-fbf0f9c250bd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6f6ec14c-0b23-33f6-fa40-b2594bf83dc0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\6fe434f5-f486-f1d9-c80b-d5ae6140f5cf.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\700d3af8-371e-4e77-21aa-1492e49b282a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\70591b99-f3c9-a2f7-f7c3-24d8afe2750a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\71392b40-a189-f00b-2057-b73935543d8c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7142c993-b991-773e-8567-bfab74de05e5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\71774882-e13e-80d1-6f98-e57a10d15b01.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\71a7d3fd-94f5-a700-5f58-78c24c379a33.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\71cc6e01-f732-272c-37e1-61e7af4e9c32.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\725baa28-72da-4b21-77b6-59ebbe4d2c03.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7369c46b-46fd-bb0c-7214-f0bcabd70dfc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\73d7f348-e1a0-0609-f112-10b9583636fc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\74050279-576f-4db8-3b4a-673341c50752.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\74b490f5-f6a7-ced2-fee9-696b67035a53.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7535aeaa-64ac-799b-5031-7c7cb12240cb.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\75a392b3-eabb-74ec-0b4c-4d868d0077cb.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\75d8fbcd-496a-e1b7-71da-49739cba5a00.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\78368518-b8c3-b6b5-3bee-719577800ee3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7868698d-ba48-9808-25bb-bb2653b2c830.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\790c97ae-83ff-07e4-e695-020633588d1f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\79b6e845-7c40-d3a6-95a3-20455f4c35c9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7a08021f-1f5a-6507-e1cd-93b143d9fb61.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7a233234-a61e-fae3-cf47-51d436b941b5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7a47b836-4b67-9e2f-a1f0-f5f64e1d06d1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7a75e7e7-35bf-8b13-98f3-26d827372ffd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7a9a65bc-2e44-f695-d16c-f28aaaf476ab.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7abf1401-8786-3299-a371-9a4f9ed580f6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7ad267f7-bca5-2c4e-c1e0-6d6451c935d9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7aea821f-5326-536c-1185-ef3a058bf5a8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7bb2e325-5edf-c4f1-f456-546c9f1e1b04.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7bffc6bc-f698-7a97-738b-a834926ca46d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7d11f6cf-6558-f3a7-d557-2d7f8fd6e8a6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7d4cffee-c553-42aa-3f8b-5954888ed739.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7e199029-5d81-24ae-b09d-061c13c9fe17.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7e80ce97-f79b-bfac-488e-d2c19e61695b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7e8a7b4e-2b50-3a49-e4d2-e163f4ac9eb7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7e8b3c22-df37-8e4a-7992-6ea52a0ec598.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7f1c0a6a-e232-ac55-9edb-2e67d9a38a38.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7fa5c5c6-017a-5476-8f72-e44fcda0deda.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7fa7d55a-8987-a468-6276-1270f49a4ce2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7fcc7947-11ba-d972-27f7-1fa859340360.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7fda66a1-fef7-5269-36e0-696041449019.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\7fec42e8-54b6-2bdc-e91f-81804577f100.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\800d3cb7-82a7-f75c-42f5-5694340d326d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\80a9758a-0765-a883-173c-b1b71a2dab20.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\80f66102-9ebf-4cb5-adfc-5dee73e55319.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\816f6888-f223-2346-e1fc-6ff33460e232.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\839b0406-84a7-f608-5cd8-82f831b9e8a7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\84396320-cc9d-a62d-0b20-ee9dd28a6941.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\847b90f4-3326-e6e6-4544-197dd748ab61.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\85b9df7d-d202-b50e-ce6f-8568006b87de.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\862f4a0e-210a-17f5-b351-a7f923badd15.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\867ac796-3e79-a3d0-d754-56abcda26cd9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\87624c28-d08c-c949-aa5c-e8aa4b7625fd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\876914a0-a8c5-9d36-6e2c-5f7d21ae6f65.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\87e1fabd-40d3-5359-7f1b-f8e654e2d6f3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\89fbad38-71fe-0ac4-618b-c109e0be6f60.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8a663aef-54bb-797a-0009-77938232411b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8c63d961-7f64-aa0d-a228-de10945a02ec.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8c834d32-47ba-a6c2-6903-1cc84d887f9a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8d27a22a-90ce-2174-4c1d-805b461c734f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8dc82de1-3130-ab81-2001-1c0d5f71a68e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8e2a6ab7-d54c-0eb3-7e7b-cd1a1947042d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8e54d64d-3d2d-4256-9601-b1ea0045f90c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8eddbc1a-9746-1fe9-7e48-4ce777a26db2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8efde851-877e-b1ad-aeab-a7814f499812.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8fe00c5b-3008-7b2a-4066-89ab0d44a699.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\8feca579-3ab7-4be3-ff65-2f732ea6cdbc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\90b76713-3569-3c31-0d30-f473be83fb8b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\921dc1e6-b8fa-6ff7-81e4-483831eec5d3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9231aa17-a311-1a4d-9c86-6cdd13173c5d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\92a21c09-5663-eb43-0f65-917b8b6a5900.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\92d01df3-86c3-f498-351f-ab160c519193.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\930beb32-002a-4506-46b2-bd1fc56de2a9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\932a0c55-99cf-f3ce-1275-442ec2a37b18.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\937bff02-53d5-b95c-2ec6-1e512a8fbcb3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\93c3c130-0112-418c-c923-3a157b141383.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\93e592a1-352a-15f2-6b12-9d6b35b98ba9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9447fd2d-11c7-3925-9e4a-2ed894a56c09.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9498d164-c6d0-3a73-81ba-07726523302f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9506425e-17e4-d1bf-98cd-012d35d9ad16.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\95e30e43-42c9-1bd5-04b9-81af85eb34f8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\95e33f86-b9de-257c-71c4-b7db9ab4800f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\95fdb245-e411-0d2c-b432-b3a00b9f6b4f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\96285748-da79-6588-227b-8b71adea0d2c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\969656b2-8a66-d66e-e467-c2a7a473a1d6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\96a397ac-12a4-8765-8f2f-dfc744050d80.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\96c6aabd-3ea2-2bc4-6397-9ac1fdcc34e8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\970b8af1-60e8-6d31-7fe2-53d63255fe2d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9710fb98-2733-9b54-62e6-0aacdb960104.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\975083b7-c825-4724-6527-b081bef60238.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\97c383f9-f6cf-cc74-0c05-a5166b5fd5f4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\97ca21c6-b7b3-ac91-a4b8-f912b81df09b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\98af9e85-bc76-a6db-a604-9b11702aa780.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9937105a-cda2-2ad3-e257-e5109688207a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\993e0a6a-1981-5ddd-5cea-443bbf177760.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9a6d2405-8d23-4d61-de27-f05c72637a23.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9aee4da2-e8af-fdc4-3578-2f10e70a49a0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9b424472-38cf-5869-50bf-1e5d3b3ac888.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9bccf38d-1baf-b491-edd6-924ce7bb758c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9c7debb2-4bb3-f95f-1d0c-a405f119e49f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9cc27247-704c-6ba3-dc50-b458f7f32e5d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9d70849f-26da-a69d-899f-46508087d4ce.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9e4d781c-9244-1e45-b602-ed0e4293cc17.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9eafe560-4637-366b-28ce-72de3d1d649a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9ef71a38-3a6e-cd7c-9461-448d97cc8f13.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9ef7a7a4-8595-5e3e-4824-8fd1154c6738.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9f1f1e6d-f6b9-a92f-e4d3-5ad462e3d6a8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\9fd1b455-444d-7e6e-4fba-6648faef9608.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a015629e-2bb6-8f45-cb23-bcfad03a1c7d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a08df5ed-3772-04c5-c208-5125d42dbc65.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a0a775cc-8c57-77b0-e9f0-7d442e89876c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a0aeb01d-8191-b531-a684-3bc60ec74630.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a1968c10-2565-6578-dbe8-92bc0717c7f2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a1cf0c24-da1f-ac7c-2762-e9c520cdfd4b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a28aa89a-7843-f0c6-8a05-753c83e93aaf.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a2f3b630-33f1-3d9f-108b-4ec25d1cda2f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a391ca87-4926-5d1d-771b-1a7154f8f7ed.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a3a3b60f-6b3f-30b4-3966-cd406a26342e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a3f4678f-3282-0677-4784-b8c5b8661ec8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a40f706c-5cb9-ca67-621f-35096bc74383.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a410269c-58b3-5408-2158-e880aa1b1d6b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a4730034-3609-4c7b-36fa-c1602d0017f4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a4c18b21-84c4-f956-ac46-8c177baeffa6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a6313c0d-4fb9-fa31-2a2a-9265bcae3e29.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a6860944-a1a2-7485-c7c3-1d25c441c2e5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a6a82bfc-c857-aab9-79e8-639cbd4631da.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a6dfefe8-d67f-4f22-96bc-ada55e957966.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a713677f-fee9-5da3-d7f3-18a296bc1671.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a73d4cf3-0da4-ebb8-73f1-8379e4309a73.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a7a7ffdf-f41c-d0bb-5342-6f57a0767969.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a7ae8096-45be-b95e-f3b8-755ad4ec49b4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a7b69fd6-ed46-45cc-06dc-7a520c165886.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\a81ccb5a-a3f3-2f4a-a47f-fdef62816703.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\aaddf5b5-84ad-d23a-b4b1-ed6cdc52d1d9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\aafba4bf-8651-faf1-123a-8200ace7214c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ac366094-526d-9f70-0028-334aeecbb4de.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ac84a9e2-f797-4fd2-6be7-4f238b45dea8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ac952fb7-9710-1855-08f6-75a7637d6957.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ad597187-5a25-ecd7-2a87-d658e371a289.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ad7c8836-e3e4-d0b7-d040-c946af5f686a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ada5110a-45e6-d8c0-68e9-3ab6b57afa93.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\aef2363f-89bd-2b8a-aaef-c219f11b670e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\afa7a7e3-8f7b-7594-62e3-891186b95ddd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\aff4038d-6e0d-25ad-7fd1-835c91655a85.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b02f2b99-1b42-38d6-6e07-d193ea81a267.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b0bbcbc2-5f16-d843-48ed-b3679a10a6c8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b194fc27-28b6-3afc-c414-e2d48fdac178.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b1d8aff2-07a4-1a83-8ca1-1c87411ae85a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b2285279-d297-3793-25ea-d0510bf29a5e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b24881af-4183-7e37-1283-faf195d5fdf9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b293101b-538d-d4df-e0a2-771c5aebe204.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b2b658a5-1a45-4476-b551-d13487b1a26e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b2dfd957-4316-d79d-4987-7053cab0abcb.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b33db00b-cc96-7042-6f06-8f8eeef438df.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b391249f-7f37-5d1c-ea5a-7de0b727bbe7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b3b0f149-a620-d2a4-a4d7-8f9fc059990b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b4774958-986f-db52-4600-5619f7c7e3c4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b4c8de98-29ac-1340-c0ae-398996cb715d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b5219f61-0af2-0d4f-904b-1ef960edf587.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b5c8c8af-1aa1-29af-1494-5c60b4a1ec91.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b6a364e0-5e41-6afe-5a88-cb49ac3ee577.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b6d91311-8ec9-e989-e14f-d62e85bb5bd9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b717aafc-e2f7-bded-6131-74361f3a02b5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b71f6553-11d2-65a6-ec6a-25586f0ffaa0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b7b87d0c-e483-6625-14bc-f97722eb8782.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b7ed4984-b569-354d-0a9c-408183d71b96.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b8afca89-d041-f610-dbb5-66cc4ccf7e67.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b8c9e121-91a0-0d6f-b4cb-a17b8acec433.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b8ed476f-ec05-1602-41bf-8ab8e0533bfe.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b8fc9f18-0679-2dca-e5ba-e7ad13dbe843.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b98469f7-a645-c82c-ed85-fcf0310d9d87.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\b9a55e0b-bcb0-c6f5-63b9-e4a84bb158b7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ba9623d7-612e-3018-41b1-869ed49a2b82.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bb51f920-2bb9-f30b-b1b9-6d49e73bcda8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bb5d8dc6-fd58-1367-c683-83a54ee95ec8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bc815893-c8db-c907-3795-31d93e6ccd5c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bcdc2210-da46-8a5b-eace-d5768c343cc6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bd8e8ee6-3438-10ed-548b-1b6a875ad1af.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bdc8b82e-1f5c-4e8b-94cf-59d39a802f2d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bdce6560-24e4-a089-f0d8-92e69c2086d0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bddd0dd1-fd58-46cc-4501-4a2e6bcf2dd3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bde500bd-00e8-cd8d-3383-2fb3653e671d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\be6b306b-ab23-3b5b-407a-448152239147.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bec3728d-106b-83ab-3c5f-a33f462d7104.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bee1e556-bda0-9860-93a4-34b5f6622ed6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bee712d8-63a8-8664-54f0-79fde9ad3b73.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\bf0a3a65-2896-d92e-c387-716b83de6015.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c09b8429-84f6-ec82-576d-b07621148182.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c0e6aee4-9b6c-357a-3960-f3ee21daa7ff.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c0e6d7ac-6f19-dcc6-70ad-3967936b3bbd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c1d919c5-67bd-6383-811a-1a69807fec54.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c204707c-0822-071c-8905-9da4a81e8920.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c25a3440-f974-7fb3-4ebd-0bcd46dc72e0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c2778ba2-407c-6ae2-e84e-fb8c90e7a475.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c298bba4-4c84-4ca9-dbe7-8262cd1b18ac.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c2d216eb-a42b-6482-53fb-623510815e0e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c43733a1-b1e9-9218-52e0-0f06a0b9ed14.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c4477f42-22b1-b125-68ed-a813a803b9bc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c4bb35bf-f8ba-4893-9422-e60cf912da19.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c5ae2869-d6a7-dace-c5d4-f25ec10e53e5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c5b6916d-1bd6-85ed-2ae6-6c249b7db665.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c5c7ba18-0542-3a89-e710-6430c4bc620b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c67fbb63-40ee-2428-ef9f-77633bcb9b88.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c6839ddc-7cc2-f77c-df90-333d2b6f300d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c706b15f-e23c-4a9c-a22f-76d87a5bacc9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c755cdaf-75b8-d426-21e6-b89ad6139aae.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c7b07bd2-b62e-1e03-622f-570fcde39cd0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c80f6242-202a-be85-6806-532b18235b7f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c87eed77-cd20-2e14-81f3-794908ad37ba.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c92d6d8b-cc11-2a58-1581-09f8b3dfc000.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c94d03c7-7f41-673b-ce90-a39d8d7740e6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c977d560-7abd-8a1c-7405-b3c42df4b05d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c99591ce-23c9-a832-6800-7aa8a3500894.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\c9b26e50-afbb-6d1d-a374-28b889407ee6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\cab70b2c-543b-097f-13be-e905cb53726b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\cb682351-ccba-9d88-3fe2-2e5d12ae01c9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\cb710cab-1c20-baa4-4e4a-df7f851f2465.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\cbf2cfcf-0c46-3087-2138-4e30568c4573.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ccad7a00-f4e3-8ae7-2181-1fb1d6f36de5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ccde117d-f6b8-3331-f228-14abad7f7ad6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\cd15d294-ac6f-f35b-9996-d28215161c2f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\cdb79eb4-f345-af07-f28d-915b205ef675.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\cee75dd9-17e1-d6ac-96c6-bf17642f1d0f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d01f9cf7-83d5-31d7-271e-d2d2a4d653a4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d01fc3fb-cb02-710c-bbc4-39099a4db710.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d080e859-8f59-0065-b66a-524f0043679a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d0cc0253-128c-3598-d0ee-38f2ddc9b85e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d206b6f5-ffa0-7612-43fb-4f30f96e0f8c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d2557ea8-1381-2be7-108f-a2fd017883d7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d26863d7-cb8a-afd6-bb75-ed70f6e6560f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d26d6126-6244-c64b-a0f4-2cbba8159399.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d2733cce-fd37-3e3d-aa53-53457cc7c3a9.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d2be122c-4e14-db0a-bf48-48c5993fd98e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d2de5f50-faba-e2ed-45a3-882e7fb0ef40.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d3396d9c-dc38-e5f8-cf6e-537b5c039713.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d39e9d1a-f099-5110-4962-3e25bcbd1ca6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d3dcec4b-5d94-4ea6-4098-84fcf9e5f121.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d3fad114-69f7-eee8-39a4-4f18cd9e898b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d41d69a8-cc4a-0af8-bf77-ca747495157c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d45c7b72-f833-7eb5-f5de-b3445868d0be.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d4c7d532-e7c7-56d7-eddd-aa4ba2a5210a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d500b4b9-ef8a-cca6-a551-ae40f35b8f80.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d6a59119-9050-42eb-4382-9ede2c8ed8be.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d6f5b64d-adbd-9730-ee10-a0ee23ecf599.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d73b4d04-5f5c-03b2-46c7-889bb5fc020a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d781799d-e9e6-b6d6-dc71-77640cea549e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d7876e51-ce0b-4c4f-bdd7-789c3445e9c3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d9c80a91-536b-63b0-66f0-542fc9a57264.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\d9f8b018-842f-eaf8-4947-bd50f7fd9681.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\da2c0a20-32c6-41c5-e0e4-17a9f2c26ce1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\da35be48-9607-a59f-cb88-dea81948a93a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\dbaf2628-5bd5-8676-f20a-f5ad7bbcd9c5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\dbc4627e-e81a-b216-b4a0-9ec629921961.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\dbdaf0eb-d704-29c9-1e94-646510f6dc1e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\dc537368-10ab-c6f0-63ec-327866eb7ddd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\dc664411-5722-d17e-7d6b-a05c7282e735.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\dd0ecb3c-8f45-a49a-341d-756a08306fcf.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\dd6ee62a-e5f9-3996-dd79-10fdd0b65d97.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ddc8a663-7af7-1b10-a04b-d8e838ab1ce7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\df859189-8453-e390-74ac-86fa8820d3ec.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\dfe0e73f-731b-f9e7-1bb4-264426deea7f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e07714c1-1541-352c-8ad5-caf5676f1d92.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e1666fbc-fa58-92b2-7135-35fe398c0d69.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e18ad131-da93-a305-f4c1-c59c8a4113bb.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e1ae26fb-123a-0a80-31ff-e2e2ed0ac969.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e1f06a60-405d-5dfd-d120-5baa85d03ac3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e293cdad-9bd4-17fa-8800-04f019e83f4d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e297b689-9c06-c2f0-2966-5f02f16b3719.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e3382494-bdac-ec79-cf98-2716b4511726.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e3e37404-a82f-59ec-3edc-8d7391bf2cc8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e56fde0e-85d1-6005-d09c-fb1ff3469c9e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e58c8108-626e-5ba6-f445-fa079861d546.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e5bbdacd-5fa5-1a86-33f3-cf414d57edc3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e5be0d1f-739f-9ddb-0cd0-e9811a7b9dfd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e620ecb4-7eae-4014-e23f-991659e230a0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e6683fc1-5c7a-8de2-1e3d-2c20d342679b.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e66ff275-9c54-55ac-0924-1d250c4a30a3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e698a853-b611-ad6d-de02-aa0a95e18f52.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e69e3c94-62fb-eca0-1ce5-5eab359897a0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e6bc9ebc-a6f1-71af-a2f5-ad7a8a181168.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e7e53ace-8fca-4dc2-4025-8a83ca1ad1b0.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e816061c-7cfc-adba-3b90-9f3342fc14b8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e84a6ee8-08b3-cf97-b2ff-81feba296245.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\e85a93f5-e021-0352-b82b-e4afdd5364c6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\eb11b9f5-f4cc-edb7-4070-a66ff179925f.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\eba437ac-7be7-7f3b-0891-9619567f2026.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ebb1e087-92e1-9abc-8207-256f895e595e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ec373d52-a35c-efbd-0e13-b84af1377181.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\eca3bf84-1495-231a-e98a-f29444f07d2c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ee290cc3-c4f2-7828-2ffa-dfdb7ee86422.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ee363029-75e9-7e6d-fd06-9656ab471961.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\eee4f4e8-91ae-1941-74d7-f2dfcd3fd51a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\efa2ac20-b0e1-a44c-9ee7-43d1a2d7fb25.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f0103f84-1b03-e561-86f9-c4d3e26b7af4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f0f0f1b8-618f-55a2-ded0-8276db4f5517.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f1257845-aeac-b16f-1346-2f3cd9e289d2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f1329cb2-3703-dad3-b6d0-69b455afd592.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f25b17c6-1b3c-3bc5-8c4c-66c02c244dcb.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f26e0adc-a0f0-6640-8387-f7dbfac6714c.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f2ff184e-d4d7-ec67-c534-0eda1c79d0e3.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f303e189-cccb-cb35-c7ff-f245dde5f4d8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f37d62fa-8e56-9531-ee02-dd5aa7c39aa6.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f40b0d87-86b7-7ec7-54fb-ea365c8105b5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f4670776-a08d-5fea-2500-9ec286cfa467.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f6b53993-154c-82e5-a5f8-2d96bd9bbd3e.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f70fbfe8-69be-c8cd-4ed3-97f9dc329090.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f77f3362-d81f-f9f3-9585-1872ecafb4e8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f7aee9cd-f6d1-8539-533c-8c000f15fde7.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f87ac04e-bd8c-32a8-8aae-e45c52311e9d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f8e0834f-997c-35c3-95e3-95cf4b56a0ae.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\f9ea525d-f296-e351-f19f-bd9f40f91db1.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fa1d4316-f323-0396-2dcc-58cccb630aec.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fa2d4515-937c-4ef4-e8ec-086a8384d987.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fac870b2-3d3c-e4ba-d9fe-798331c727fa.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fb51a1e5-9106-13d1-4fd8-9246d714b6f2.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fbb2a60e-ac85-a1aa-1b54-320a94457ef8.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fc148bc0-0592-207d-7251-30db65c0c71d.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fcecf4df-9402-79b3-64da-ce717914f2f5.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fcf486c6-ca70-5482-3c93-834d6d39af1a.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fd07d0e9-f4a5-f8bb-a490-081af8568810.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fd202f6c-251c-df39-5789-ca6824766edc.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\fec4bec3-244f-43c1-8214-041e4fb3cf08.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ff0969ef-bc04-cdbe-a70f-500f1b365200.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ff12df98-bd43-84f3-3931-dee9f7f812d4.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ff21b3b1-afe8-0a66-d69c-846ba7aa8623.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\html\ffb1b4a2-2666-ff0a-ef3a-90fe51b490bd.htm" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\AlertCaution.png" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\AlertNote.png" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\AlertSecurity.png" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\CFW.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\CodeExample.png" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\favicon.ico" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privclass.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privdelegate.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privenumeration.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privevent.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privextension.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privfield.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privinterface.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privmethod.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privproperty.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\privstructure.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protclass.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protdelegate.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protenumeration.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protevent.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protextension.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protfield.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protinterface.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protmethod.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protoperator.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protproperty.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\protstructure.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubclass.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubdelegate.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubenumeration.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubevent.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubextension.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubfield.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubinterface.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubmethod.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\puboperator.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubproperty.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\pubstructure.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\Search.png" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\SectionCollapsed.png" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\SectionExpanded.png" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\slMobile.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\static.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\TocClose.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\TocCollapsed.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\TocExpanded.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\TocOpen.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\icons\xna.gif" />
+    <Content Include="Pages\Manuais\Desenvolvedor\index.html" />
+    <Content Include="Pages\Manuais\Desenvolvedor\scripts\branding-Website.js" />
+    <Content Include="Pages\Manuais\Desenvolvedor\scripts\branding.js" />
+    <Content Include="Pages\Manuais\Desenvolvedor\scripts\jquery-1.11.0.min.js" />
+    <Content Include="Pages\Manuais\Desenvolvedor\search.html" />
+    <Content Include="Pages\Manuais\Desenvolvedor\SearchHelp.aspx" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-cs-CZ.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-de-DE.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-en-US.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-es-ES.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-fr-FR.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-Help1.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-HelpViewer.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-it-IT.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-ja-JP.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-ko-KR.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-pl-PL.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-pt-BR.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-ru-RU.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-tr-TR.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-Website.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-zh-CN.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding-zh-TW.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\styles\branding.css" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\01afd1b5-0a9f-9c14-7a92-924a9537026c.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\038087b5-3e71-8940-a74d-48dc68f791e2.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\08e6fc87-7863-ae53-61ae-359d51ee7993.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\09660123-5c51-b9c8-56c0-90f124027fd0.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\0ad3e285-f296-3fa4-61e8-542bbff93c50.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\10bade28-5f1c-fcb8-40e1-42485614e093.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\12851389-fac2-a275-e857-36a1c2f3e0ed.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\146fa2c2-c642-bccf-613d-491eaf11c67e.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\14e0e9f0-b1e3-8a6a-fafd-4f8601fb2877.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\150b33fe-dba9-0776-2e03-cc34a319ecf9.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\180d093f-2d1b-113f-78fd-cab55855843a.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\1a9a2375-155e-cddf-36f0-af11bdbe1143.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\1b1fa5db-01a9-132a-ccf1-8dd881b322a3.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\1c4fb649-1fb7-f850-583c-8f6786154698.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\1d0466d4-2ae5-ebb5-23f1-80c23a392fa2.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\1e6aac21-453f-2a49-edd3-058856d04773.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\1ea6a18e-ae5b-dceb-7ad0-b1b6d43fc89d.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\1f4c764b-c66c-9ea4-5e98-f33593e57d17.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\2438dc87-1465-9f75-0e89-36e605fd9132.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\271ac0b7-387b-b5c7-465b-e44da55271eb.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\27655864-31f9-0f7f-f8b3-820ac27a70f4.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\27b2c957-f7b8-bff7-2caa-c9136c521f37.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\2b8c3ae4-b16d-7aa4-bf94-85fbcb3a3e0d.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\2cf9a0d9-5cfd-9caf-a597-fa0efe7161af.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\2d436b80-72bf-7e39-ed97-0601362aa1d1.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\2fce8410-c169-eae8-c5e3-d14ac76ea090.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\357091ce-82f1-e2aa-6604-fa6eb4a59dd8.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\36b189f2-ab8d-5099-bdee-c5629e033b80.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\396583da-0a63-1d36-924f-adb1d339c1e1.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\3d117ed6-9f12-b5ac-2f90-359ca5bae92e.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\415933e4-f40d-8bee-13ad-35f96b982e70.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\42a2cb9b-c2f7-8383-c1c3-6bec3a0e286c.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\455e0fef-6426-fa7b-bbed-9589b4360acb.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\46fdee2a-c281-c2fe-2414-1e21996b6e30.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\4759d281-0ec1-f0ed-6fc6-e24441cc65a1.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\4be3d9eb-8980-3e80-3753-0d292bf76eae.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\4ddaa17f-24ca-9387-8db4-4a47143cefa3.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\4f8f5610-bfda-b74f-f897-ad30effb43b7.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\4fc4f079-fa53-3d03-7a00-f4bb6a633a8b.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\52219073-110b-555a-0390-72a3d3be7434.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\549452f2-27fd-bb8a-ec7d-2816128cd2c5.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\5592a534-3f3e-f093-47f3-382d9a8ce616.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\5b6a9074-0bfd-4de2-a596-20c2c6ad4d1f.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\5d2a5542-67e4-5577-f78a-79286ed3a8ab.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\61c2ff12-9c2a-3a3f-3561-efdf13412a3c.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\6528ef18-a92a-02fb-6602-571683ec1dc3.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\65529f27-6e5e-9bd1-edc4-09edf187fdc8.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\6587585a-3892-87ad-d3f1-830a6f7451bc.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\6684a057-7aa3-5498-6eac-8dd6e3f1c272.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\688594a9-45ff-a678-7fea-8cc8b3b9dbef.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\6a085cd1-c236-3662-49a5-32b2e08d0df7.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\6c28d18f-00ee-04c4-e2ed-6e04dfd6f2d1.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\6fe434f5-f486-f1d9-c80b-d5ae6140f5cf.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\70591b99-f3c9-a2f7-f7c3-24d8afe2750a.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\725baa28-72da-4b21-77b6-59ebbe4d2c03.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\8d27a22a-90ce-2174-4c1d-805b461c734f.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\8efde851-877e-b1ad-aeab-a7814f499812.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\930beb32-002a-4506-46b2-bd1fc56de2a9.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\93e592a1-352a-15f2-6b12-9d6b35b98ba9.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\9710fb98-2733-9b54-62e6-0aacdb960104.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\97c383f9-f6cf-cc74-0c05-a5166b5fd5f4.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\9b424472-38cf-5869-50bf-1e5d3b3ac888.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\9eafe560-4637-366b-28ce-72de3d1d649a.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\9ef71a38-3a6e-cd7c-9461-448d97cc8f13.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\a0aeb01d-8191-b531-a684-3bc60ec74630.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\a4c18b21-84c4-f956-ac46-8c177baeffa6.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\a7a7ffdf-f41c-d0bb-5342-6f57a0767969.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\ad7c8836-e3e4-d0b7-d040-c946af5f686a.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\b02f2b99-1b42-38d6-6e07-d193ea81a267.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\b2285279-d297-3793-25ea-d0510bf29a5e.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\b33db00b-cc96-7042-6f06-8f8eeef438df.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\b391249f-7f37-5d1c-ea5a-7de0b727bbe7.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\bb5d8dc6-fd58-1367-c683-83a54ee95ec8.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\bdce6560-24e4-a089-f0d8-92e69c2086d0.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\bddd0dd1-fd58-46cc-4501-4a2e6bcf2dd3.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\c298bba4-4c84-4ca9-dbe7-8262cd1b18ac.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\c43733a1-b1e9-9218-52e0-0f06a0b9ed14.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\c5ae2869-d6a7-dace-c5d4-f25ec10e53e5.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\c67fbb63-40ee-2428-ef9f-77633bcb9b88.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\c755cdaf-75b8-d426-21e6-b89ad6139aae.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\c87eed77-cd20-2e14-81f3-794908ad37ba.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\c92d6d8b-cc11-2a58-1581-09f8b3dfc000.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\c99591ce-23c9-a832-6800-7aa8a3500894.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\ccad7a00-f4e3-8ae7-2181-1fb1d6f36de5.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\cee75dd9-17e1-d6ac-96c6-bf17642f1d0f.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d01f9cf7-83d5-31d7-271e-d2d2a4d653a4.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d01fc3fb-cb02-710c-bbc4-39099a4db710.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d080e859-8f59-0065-b66a-524f0043679a.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d206b6f5-ffa0-7612-43fb-4f30f96e0f8c.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d26863d7-cb8a-afd6-bb75-ed70f6e6560f.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d2733cce-fd37-3e3d-aa53-53457cc7c3a9.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d3396d9c-dc38-e5f8-cf6e-537b5c039713.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d39e9d1a-f099-5110-4962-3e25bcbd1ca6.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d3fad114-69f7-eee8-39a4-4f18cd9e898b.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d45c7b72-f833-7eb5-f5de-b3445868d0be.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\d781799d-e9e6-b6d6-dc71-77640cea549e.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\dc664411-5722-d17e-7d6b-a05c7282e735.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\e293cdad-9bd4-17fa-8800-04f019e83f4d.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\e297b689-9c06-c2f0-2966-5f02f16b3719.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\e58c8108-626e-5ba6-f445-fa079861d546.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\e6683fc1-5c7a-8de2-1e3d-2c20d342679b.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\e698a853-b611-ad6d-de02-aa0a95e18f52.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\e69e3c94-62fb-eca0-1ce5-5eab359897a0.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\e7e53ace-8fca-4dc2-4025-8a83ca1ad1b0.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\f25b17c6-1b3c-3bc5-8c4c-66c02c244dcb.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\f26e0adc-a0f0-6640-8387-f7dbfac6714c.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\f2ff184e-d4d7-ec67-c534-0eda1c79d0e3.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\f6b53993-154c-82e5-a5f8-2d96bd9bbd3e.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\fa2d4515-937c-4ef4-e8ec-086a8384d987.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\fcecf4df-9402-79b3-64da-ce717914f2f5.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\toc\roottoc.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\WebKI.xml" />
+    <Content Include="Pages\Manuais\Desenvolvedor\WebTOC.xml" />
+    <Content Include="Pages\pgFrequenciaFuncionario.aspx" />
+    <Content Include="Pages\pgJustificativasDoSetor.aspx" />
+    <Content Include="Pages\pgCargo.aspx" />
+    <Content Include="Pages\pgFeriado.aspx" />
+    <Content Include="Pages\pgRelatorioFrequencia.aspx" />
+    <Content Include="Pages\pgAlterarSenha.aspx" />
+    <Content Include="Pages\pgFrequencia.aspx" />
+    <Content Include="Pages\pgFuncionario.aspx" />
+    <Content Include="Pages\pgInicial.aspx" />
+    <Content Include="Pages\pgJustificativa.aspx" />
+    <Content Include="Pages\pgLogin.aspx" />
+    <Content Include="Pages\pgLogoff.aspx" />
+    <Content Include="Pages\pgSetor.aspx" />
+    <Content Include="Pages\Manuais\Usuario\Administrador.html" />
+    <Content Include="Pages\Manuais\Usuario\Alterar.html" />
+    <Content Include="Pages\Manuais\Usuario\Alterar1.html" />
+    <Content Include="Pages\Manuais\Usuario\Alterar2.html" />
+    <Content Include="Pages\Manuais\Usuario\AlterarFuncionario.html" />
+    <Content Include="Pages\Manuais\Usuario\AlterarJustificativa.html" />
+    <Content Include="Pages\Manuais\Usuario\AutorizarJustificativa.html" />
+    <Content Include="Pages\Manuais\Usuario\Cargo.html" />
+    <Content Include="Pages\Manuais\Usuario\ConsultarFrequencia.html" />
+    <Content Include="Pages\Manuais\Usuario\Consultasimples.html" />
+    <Content Include="Pages\Manuais\Usuario\Criar.html" />
+    <Content Include="Pages\Manuais\Usuario\Criar1.html" />
+    <Content Include="Pages\Manuais\Usuario\Criar2.html" />
+    <Content Include="Pages\Manuais\Usuario\CriarFuncionario.html" />
+    <Content Include="Pages\Manuais\Usuario\CriarJustificativa.html" />
+    <Content Include="Pages\Manuais\Usuario\css\base.css" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\0.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\1.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\10.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\11.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\12.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\13.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\14.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\15.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\16.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\17.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\18.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\19.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\2.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\20.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\21.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\22.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\23.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\24.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\25.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\26.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\27.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\28.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\29.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\3.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\30.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\31.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\32.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\33.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\34.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\35.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\36.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\37.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\38.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\39.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\4.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\40.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\41.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\5.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\6.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\7.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\8.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\9.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\icons.gif" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\loading.gif" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\ui.dynatree.css" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\chm\vline.gif" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\0.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\1.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\10.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\11.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\12.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\13.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\14.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\15.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\16.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\17.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\18.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\19.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\2.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\20.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\21.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\22.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\23.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\24.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\25.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\26.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\27.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\28.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\29.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\3.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\30.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\31.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\32.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\33.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\34.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\35.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\36.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\37.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\38.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\39.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\4.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\40.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\41.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\5.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\6.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\7.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\8.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\9.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\icons.gif" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\loading.gif" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\ui.dynatree.css" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\folder\vline.gif" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\0.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\1.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\10.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\11.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\12.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\13.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\14.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\15.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\16.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\17.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\18.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\19.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\2.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\20.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\21.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\22.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\23.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\24.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\25.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\26.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\27.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\28.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\29.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\3.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\30.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\31.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\32.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\33.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\34.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\35.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\36.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\37.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\38.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\39.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\4.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\40.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\41.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\5.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\6.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\7.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\8.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\9.png" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\icons.gif" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\loading.gif" />
+    <Content Include="Pages\Manuais\Usuario\css\dynatree\vista\ui.dynatree.css" />
+    <Content Include="Pages\Manuais\Usuario\css\hnd.css" />
+    <Content Include="Pages\Manuais\Usuario\css\ielte8.css" />
+    <Content Include="Pages\Manuais\Usuario\css\reset.css" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Pages\Manuais\Usuario\css\silver-theme\jquery-ui-1.8.12.custom.css" />
+    <Content Include="Pages\Manuais\Usuario\css\toc.css" />
+    <Content Include="Pages\Manuais\Usuario\Feriado.html" />
+    <Content Include="Pages\Manuais\Usuario\Funcionario.html" />
+    <Content Include="Pages\Manuais\Usuario\Gerente.html" />
+    <Content Include="Pages\Manuais\Usuario\img\arrow_left.png" />
+    <Content Include="Pages\Manuais\Usuario\img\arrow_right.png" />
+    <Content Include="Pages\Manuais\Usuario\img\arrow_up.png" />
+    <Content Include="Pages\Manuais\Usuario\img\book-closed.png" />
+    <Content Include="Pages\Manuais\Usuario\img\book.png" />
+    <Content Include="Pages\Manuais\Usuario\img\footer-bg.png" />
+    <Content Include="Pages\Manuais\Usuario\img\header-bg.png" />
+    <Content Include="Pages\Manuais\Usuario\img\topic.png" />
+    <Content Include="Pages\Manuais\Usuario\js\hnd.js" />
+    <Content Include="Pages\Manuais\Usuario\js\hndjsse.js" />
+    <Content Include="Pages\Manuais\Usuario\js\hndsd.js" />
+    <Content Include="Pages\Manuais\Usuario\js\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="Pages\Manuais\Usuario\js\jquery.cookie.js" />
+    <Content Include="Pages\Manuais\Usuario\js\jquery.dynatree.min.js" />
+    <Content Include="Pages\Manuais\Usuario\js\jquery.min.js" />
+    <Content Include="Pages\Manuais\Usuario\Justificativa.html" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 51.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 52.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 53.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 55.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 61.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 63.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 64.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 65.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 66.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\Captura de Tela 67.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem1.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem10.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem11.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem12.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem13.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem14.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem15.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem4.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem5.png" />
+    <Content Include="Pages\Manuais\Usuario\lib\NewItem6.png" />
+    <Content Include="Pages\Manuais\Usuario\PaginaAdministrativa.html" />
+    <Content Include="Pages\Manuais\Usuario\RegistrarFrequencia.html" />
+    <Content Include="Pages\Manuais\Usuario\RelatoriodeFrequencia.html" />
+    <Content Include="Pages\Manuais\Usuario\Setor.html" />
+    <Content Include="Pages\Manuais\Usuario\SISFREQ.html" />
+    <Content Include="Pages\Manuais\Usuario\toc.html" />
+    <Content Include="Pages\Manuais\Usuario\VisualizarFrequencia.html" />
+    <Content Include="pgFrequencia.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.inputmask\jquery.inputmask.date.extensions.js" />
+    <Content Include="Scripts\jquery.inputmask\jquery.inputmask.extensions.js" />
+    <Content Include="Scripts\jquery.inputmask\jquery.inputmask.js" />
+    <Content Include="Scripts\jquery.inputmask\jquery.inputmask.numeric.extensions.js" />
+    <Content Include="Scripts\jquery.inputmask\jquery.inputmask.phone.extensions.js" />
+    <Content Include="Scripts\jquery.inputmask\jquery.inputmask.regex.extensions.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Layouts\MPExterna.Master.cs">
+      <DependentUpon>MPExterna.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MPExterna.Master.designer.cs">
+      <DependentUpon>MPExterna.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MPInterna.master.cs">
+      <DependentUpon>MPInterna.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MPInterna.master.designer.cs">
+      <DependentUpon>MPInterna.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgFrequenciaFuncionario.aspx.cs">
+      <DependentUpon>pgFrequenciaFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgFrequenciaFuncionario.aspx.designer.cs">
+      <DependentUpon>pgFrequenciaFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgJustificativasDoSetor.aspx.cs">
+      <DependentUpon>pgJustificativasDoSetor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgJustificativasDoSetor.aspx.designer.cs">
+      <DependentUpon>pgJustificativasDoSetor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgCargo.aspx.cs">
+      <DependentUpon>pgCargo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgCargo.aspx.designer.cs">
+      <DependentUpon>pgCargo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgFeriado.aspx.cs">
+      <DependentUpon>pgFeriado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgFeriado.aspx.designer.cs">
+      <DependentUpon>pgFeriado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgRelatorioFrequencia.aspx.cs">
+      <DependentUpon>pgRelatorioFrequencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgRelatorioFrequencia.aspx.designer.cs">
+      <DependentUpon>pgRelatorioFrequencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgAlterarSenha.aspx.cs">
+      <DependentUpon>pgAlterarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgAlterarSenha.aspx.designer.cs">
+      <DependentUpon>pgAlterarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgFrequencia.aspx.cs">
+      <DependentUpon>pgFrequencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgFrequencia.aspx.designer.cs">
+      <DependentUpon>pgFrequencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgFuncionario.aspx.cs">
+      <DependentUpon>pgFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgFuncionario.aspx.designer.cs">
+      <DependentUpon>pgFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgInicial.aspx.cs">
+      <DependentUpon>pgInicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgInicial.aspx.designer.cs">
+      <DependentUpon>pgInicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgJustificativa.aspx.cs">
+      <DependentUpon>pgJustificativa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgJustificativa.aspx.designer.cs">
+      <DependentUpon>pgJustificativa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgLogin.aspx.cs">
+      <DependentUpon>pgLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgLogin.aspx.designer.cs">
+      <DependentUpon>pgLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgLogoff.aspx.cs">
+      <DependentUpon>pgLogoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgLogoff.aspx.designer.cs">
+      <DependentUpon>pgLogoff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pgSetor.aspx.cs">
+      <DependentUpon>pgSetor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pgSetor.aspx.designer.cs">
+      <DependentUpon>pgSetor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pgFrequencia.aspx.cs">
+      <DependentUpon>pgFrequencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pgFrequencia.aspx.designer.cs">
+      <DependentUpon>pgFrequencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{3d109df9-5286-4d6a-b381-70888fe31542}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8749</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8749/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

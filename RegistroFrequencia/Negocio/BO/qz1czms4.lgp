@@ -1,0 +1,202 @@
+﻿using Negocio.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Negocio.BO
+{
+    /// <summary>
+    /// Classe de negocio de relatorio
+    /// </summary>
+    public class RelatorioBO
+    {
+        /// <summary>
+        /// Método para gerar o relatorio de frequência
+        /// </summary>
+        /// <param name="objFuncionario">Funcionario do relatorio</param>
+        /// <param name="listaFrequencia">Lista de frequência do relatorio</param>
+        /// <returns>Dados do relatorio</returns>
+        public Relatorio GerarRelatorio(Funcionario objFuncionario, IList<Frequencia> listaFrequencia)
+        {
+            Relatorio objRelatorio = new Relatorio();
+
+            objRelatorio.DiasUteis = CalcularDiasUteis(listaFrequencia);
+            objRelatorio.HorasTrabalhar = TimeSpan.FromMinutes(objFuncionario.Cargo.CargaHoraria.TotalMinutes * objRelatorio.DiasUteis);
+            objRelatorio.HorasTrabalhadas = HorasTrabalhadas(listaFrequencia);
+            objRelatorio.Faltas = CalcularFaltas(listaFrequencia);
+            objRelatorio.FaltasJustificadas = CalcularFaltasJustificadas(listaFrequencia);
+            objRelatorio.Incompletos = CalcularIncompletos(listaFrequencia);
+            objRelatorio.IncompletosJustificadas = CalcularIncompletosJustificados(listaFrequencia);
+            objRelatorio.HorasTrabalhadasSabado = HorasTrabalhadasSabado(listaFrequencia);
+            objRelatorio.HorasTrabalhadasDomingo = HorasTrabalhadasDomingo(listaFrequencia);
+
+            return objRelatorio;
+        }
+
+        #region Métodos
+        /// <summary>
+        /// Método para calcular os dias uteis que o funcionario deve trabalhar.
+        /// </summary>
+        /// <param name="listaFrequencia">Lista de frequência do periodo do relatorio</param>
+        /// <returns>Quantidade de dias que ele deve trabalhar</returns>
+        private int CalcularDiasUteis(IList<Frequencia> listaFrequencia)
+        {
+            int sabados = 0;
+            int domingos = 0;
+            int feriados = 0;
+
+            for (int i = 0; i <= listaFrequencia.Count; i++)
+            {
+                if (Convert.ToString(listaFrequencia[i].Dia.DayOfWeek) == "Sunday")
+                {
+                    sabados++;
+                }
+                else if (Convert.ToString(listaFrequencia[i].Dia.DayOfWeek) == "Monday")
+                {
+                    domingos++;
+                }
+
+            }
+
+            return listaFrequencia.Count - sabados - domingos;
+        }
+
+        /// <summary>
+        /// Método para calcular as horas trabalhadas do funcionario
+        /// </summary>
+        /// <param name="listaFrequencia">Lista de frequência do periodo do relatorio</param>
+        /// <returns>Quantidade de horas que o funcionario trabalhou</returns>
+        private TimeSpan HorasTrabalhadas(IList<Frequencia> listaFrequencia)
+        {
+            TimeSpan horasTrabalhadas = new TimeSpan(1);
+
+            for (int count = 0; count < listaFrequencia.Count; count++)
+            {
+                if (listaFrequencia[count].HorasTrabalhadas != null)
+                {
+                    horasTrabalhadas = horasTrabalhadas + (TimeSpan)listaFrequencia[count].HorasTrabalhadas;
+                }
+            }
+
+            return horasTrabalhadas;
+        }
+
+        /// <summary>
+        /// Método para calcular as horas trabalhadas no sabado
+        /// </summary>
+        /// <param name="listaFrequencia">Lista de frequência do periodo do relatorio</param>
+        /// <returns>Quantidade de hroas trabalhadas no sabado</returns>
+        private TimeSpan HorasTrabalhadasSabado(IList<Frequencia> listaFrequencia)
+        {
+            TimeSpan horasTrabalhadasSabado = new TimeSpan(1);
+
+            for (int count = 0; count < listaFrequencia.Count; count++)
+            {
+                if (listaFrequencia[count].HorasTrabalhadas != null && listaFrequencia[count].Dia.DayOfWeek.ToString() == "Saturday")
+                {
+                    horasTrabalhadasSabado = horasTrabalhadasSabado + (TimeSpan)listaFrequencia[count].HorasTrabalhadas;
+                }
+            }
+
+            return horasTrabalhadasSabado;
+
+        }
+
+        /// <summary>
+        /// Método para calcular as horas trabalhadas no domingo
+        /// </summary>
+        /// <param name="listaFrequencia">Lista de frequência do periodo do relatorio</param>
+        /// <returns>Horas trabalhadas no domingo</returns>
+        private Nullable<TimeSpan> HorasTrabalhadasDomingo(IList<Frequencia> listaFrequencia)
+        {
+            Nullable<TimeSpan> horasTrabalhadasDomingo = new TimeSpan(1);
+
+            for (int count = 0; count < listaFrequencia.Count; count++)
+            {
+                if (listaFrequencia[count].HorasTrabalhadas != null && listaFrequencia[count].Dia.DayOfWeek.ToString() == "Saturday")
+                {
+                    horasTrabalhadasDomingo = horasTrabalhadasDomingo + (TimeSpan)listaFrequencia[count].HorasTrabalhadas;
+                }
+            }
+
+            return horasTrabalhadasDomingo;
+        }
+
+        /// <summary>
+        /// Método para calcular a quantidade de faltas
+        /// </summary>
+        /// <param name="listaFrequencia">Lista de frequência do periodo do relatorio</param>
+        /// <returns>Quantidade de faltas</returns>
+        private int CalcularFaltas(IList<Frequencia> listaFrequencia)
+        {
+            int faltas = 0;
+
+            for (int count = 0; count < listaFrequencia.Count; count++)
+            {
+                if (listaFrequencia[count].EnumEstado.ToString() == "Faltou" || (listaFrequencia[count].EnumEstado.ToString() == "Justificado" && listaFrequencia[count].HorasTrabalhadas == null))
+                {
+                    faltas++;
+                }
+            }
+
+            return faltas;
+        }
+        /// <summary>
+        /// Método para calcular a quantidade de faltas justificadas
+        /// </summary>
+        /// <param name="listaFrequencia">Lista de frequência do periodo do relatorio</param>
+        /// <returns>Quantidade de faltas justificadas</returns>
+        private int CalcularFaltasJustificadas(IList<Frequencia> listaFrequencia)
+        {
+            int faltasJustificadas = 0;
+            for (int count = 0; count < listaFrequencia.Count; count++)
+            {
+                if ((listaFrequencia[count].EnumEstado.ToString() == "Justificado" && listaFrequencia[count].HorasTrabalhadas == null))
+                {
+                    faltasJustificadas++;
+                }
+            }
+
+            return faltasJustificadas;
+        }
+        /// <summary>
+        /// Método para calcular as faltas justificadas
+        /// </summary>
+        /// <param name="listaFrequencia">Lista de frequência do periodo do relatorio</param>
+        /// <returns>Quantidade de faltas justificadas</returns>
+        private int CalcularIncompletos(IList<Frequencia> listaFrequencia)
+        {
+            int incompletos = 0;
+
+            for (int count = 0; count < listaFrequencia.Count; count++)
+            {
+                if (listaFrequencia[count].EnumEstado.ToString() == "Incompleto" || (listaFrequencia[count].EnumEstado.ToString() == "Justificado" && listaFrequencia[count].HorasTrabalhadas != null))
+                {
+                    incompletos++;
+                }
+            }
+
+            return incompletos;
+        }
+        /// <summary>
+        /// Método para calcular a quantidade de incompletos
+        /// </summary>
+        /// <param name="listaFrequencia">Lista de frequência do periodo do relatorio</param>
+        /// <returns>Quantidade de incompletos justificados</returns>
+        private int CalcularIncompletosJustificados(IList<Frequencia> listaFrequencia)
+        {
+            int incompletosJustificados = 0;
+            for (int count = 0; count < listaFrequencia.Count; count++)
+            {
+                if ((listaFrequencia[count].EnumEstado.ToString() == "Justificado" && listaFrequencia[count].HorasTrabalhadas != null))
+                {
+                    incompletosJustificados++;
+                }
+            }
+
+            return incompletosJustificados;
+        }
+        #endregion
+    }
+}
